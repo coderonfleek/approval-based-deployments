@@ -6,6 +6,7 @@ jobs:
       - heroku/install
       - heroku/deploy-via-git:
           app-name: $HEROKU_STAGING_APP_NAME
+          branch: main
 
   test:
     working_directory: ~/repo
@@ -36,6 +37,7 @@ jobs:
       - heroku/install
       - heroku/deploy-via-git:
           app-name: $HEROKU_PRODUCTION_APP_NAME
+          branch: main
 orbs:
   heroku: circleci/heroku@0.0.10
 version: 2.1
